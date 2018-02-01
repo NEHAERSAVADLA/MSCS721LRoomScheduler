@@ -1,4 +1,4 @@
-import package com.marist.mscs721;
+package com.marist.mscs721;
 
 import java.util.ArrayList;
 
