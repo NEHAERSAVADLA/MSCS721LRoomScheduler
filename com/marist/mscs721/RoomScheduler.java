@@ -1,4 +1,4 @@
-import com.marist.mscs721;
+package com.marist.mscs721;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
