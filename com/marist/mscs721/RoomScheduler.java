@@ -20,7 +20,7 @@ contribution neha**/
  *In this class the user has choice to choose from options such as add a room, remove a room,
  * schedule a room, list the schedule, list the rooms, export the rooms and meetings to JSON, and import the rooms
  * and meetings from JSON.
- *
+ //TODO Import and export using Json
  * 
  */
 public class RoomScheduler {
@@ -33,6 +33,9 @@ public class RoomScheduler {
 
   /**
    * This is the main menu
+   //TODO Add a default case to the swith case
+   //FIXME logger instead of system.out
+   //TODO add a case to quit program
    */
   public static void main(String[] args) throws IOException {
     Boolean end = false;
@@ -162,7 +165,6 @@ public class RoomScheduler {
     // Forces input to be an integer
     try {
       capacity = scanner.nextInt();
-      // Eats newline char
       scanner.nextLine();
       logger.info(capacity);
     } catch (InputMismatchException exception) {
@@ -171,7 +173,7 @@ public class RoomScheduler {
       scanner.nextLine();
       return "";
     }
-
+//TODO  add minimum capacity to the room
     if(capacity <= 5){
       logger.error("Room capacity must be at least 5.");
       System.out.println("Room capacity must be at least 5.");
@@ -240,8 +242,6 @@ public class RoomScheduler {
    */
   protected static String scheduleRoom(ArrayList<Room> roomList) {
     System.out.println("Schedule a room:");
-
-    // Eats newline char
     scanner.nextLine();
     System.out.println("Start Date? (yyyy-mm-dd):");
     String startDate = scanner.nextLine();
@@ -258,7 +258,7 @@ public class RoomScheduler {
     String endTime = scanner.nextLine();
     logger.info(endTime);
     endTime = endTime + ":00.0";
-
+    //TODO TIMESTAMP
     // Checks if user input matches proper Timestamp format
     SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSSSS");
     try {
@@ -364,6 +364,7 @@ public class RoomScheduler {
    *
    * @param roomList the list of rooms that have been created
    * @return String  a string that displays that the import was successful
+   //FIXME JSON EXCEPTION
    */
   public static String importFromJson(ArrayList<Room> roomList) throws IOException {
     System.out.println("Enter filename you wish to import from.");
