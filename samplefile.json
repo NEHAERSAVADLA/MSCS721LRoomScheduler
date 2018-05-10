@@ -1,0 +1,2 @@
+{"rooms":[{"Building":"Donnely","name":"room1","meetings":[{"startTime":"2018-%m%-%y% %hours%:%minutes%","stopTime":"2018-%m%-%y% %hours%:%minutes%","subject":"meeting1"}],
+	"capacity":12,"Location":"marist"}]}
